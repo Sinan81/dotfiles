@@ -16,6 +16,7 @@ export PATH=$PATH:${HOME}/bin
 alias paths='echo $PATH | sed -e "s/:/\n/g" '
 #week starts on Monday
 alias cal='cal -M'
+alias ncal='ncal -bM'
 
 #keyboard costomizations for sony vaio netbook VPC...
 # switch Page-up (Prior) <-> Home and Page-down (Next) <-> End
