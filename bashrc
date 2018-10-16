@@ -11,7 +11,6 @@ alias 2by2='xprop -root -f _NET_DESKTOP_LAYOUT 32cccc -set _NET_DESKTOP_LAYOUT 0
 
 #grep ignore case
 alias grep='grep --color=auto -i'
-alias crontab='env EDITOR=nano crontab -e'
 export PATH=$PATH:${HOME}/bin
 #display paths nicely
 alias paths='echo $PATH | sed -e "s/:/\n/g" '
