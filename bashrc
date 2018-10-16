@@ -17,11 +17,13 @@ alias paths='echo $PATH | sed -e "s/:/\n/g" '
 #week starts on Monday
 alias cal='cal -M'
 
-#keyboard costomizations
+#keyboard costomizations for sony vaio netbook VPC...
+# switch Page-up (Prior) <-> Home and Page-down (Next) <-> End
 alias switchhome='xmodmap -e "keysym Home = Prior" -e "keysym Prior = Home" -e "keysym End  = Next" -e "keysym Next = End"'
 alias undo-switchhome='xmodmap  -e "keysym Prior = Home" -e "keysym Home = Prior"  -e "keysym Next = End" -e "keysym End  = Next"'
 alias menukey='xmodmap -e "keysym Insert = Menu"'
-alias eurokey='xmodmap -e "keycode 118  = EuroSign "'
+#keyboard costomization for Dell XPS 13 L322X
+# make the keyboard layout like the standard US one via switching Enter & Backslash keys
 alias return2backslash='xmodmap -e "keycode 36 = backslash bar" -e "keycode 51 = Return"'
 alias undo.return2backslash='xmodmap -e "keycode 51 = backslash bar" -e "keycode 36 = Return"'
 
