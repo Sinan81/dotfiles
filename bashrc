@@ -29,7 +29,7 @@ alias undo.return2backslash='xmodmap -e "keycode 51 = backslash bar" -e "keycode
 
 alias joltscreen="xrandr --output eDP1 --mode 1920x1080"
 alias quit='gnome-session-quit'
-alias less='less -r'
+alias less='less -ir'
 alias bc="bc --mathlib"
 
 #if in a directory containing git repo, indicate so and display the branch
