@@ -48,3 +48,6 @@ alias ncal='ncal -bM'
 alias l1="ls -1"
 alias dmesg='dmesg -T'
 alias ls='ls --color=auto'
+
+#inxi by default should display basic system info
+alias inxi='inxi -b'
