@@ -49,7 +49,10 @@ alias l1="ls -1"
 alias dmesg='dmesg -T'
 alias ls='ls --color=auto'
 
-#inxi by default should display basic system info
+# inxi by default should display basic system info
 alias inxi='inxi -b'
-#alias for foxit pdf editor, works nicely under linux via wine
+# alias for foxit pdf editor, works nicely under linux via wine
 alias foxit='wine "/home/$USER/.wine/drive_c/Program Files/Foxit Software/Foxit Reader/FoxitReader.exe"'
+
+# don't know why but one needs to use exact path to 'time' to enable options like -v etc
+alias time='/usr/bin/time -v'
