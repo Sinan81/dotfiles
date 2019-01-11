@@ -59,3 +59,6 @@ alias time='/usr/bin/time -v'
 
 # replace spaces with underscore in file/foldernames
 unspaceit () { mv -v "$1" `echo $1 | sed 's/ /_/g'`; }
+
+# convert uppercase characters to lowercase in file/foldernames
+lowerit () { mv -v "$1" `echo "$1" | tr '[A-Z]' '[a-z]'` ; }
