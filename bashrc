@@ -56,3 +56,6 @@ alias foxit='wine "/home/$USER/.wine/drive_c/Program Files/Foxit Software/Foxit 
 
 # don't know why but one needs to use exact path to 'time' to enable options like -v etc
 alias time='/usr/bin/time -v'
+
+# replace spaces with underscore in file/foldernames
+unspaceit () { mv -v "$1" `echo $1 | sed 's/ /_/g'`; }
