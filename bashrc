@@ -62,3 +62,7 @@ unspaceit () { mv -v "$1" `echo $1 | sed 's/ /_/g'`; }
 
 # convert uppercase characters to lowercase in file/foldernames
 lowerit () { mv -v "$1" `echo "$1" | tr '[A-Z]' '[a-z]'` ; }
+
+# sink the stderr etc when evince is opened from terminal
+evince () { `which evince` $1 2>&1 > /dev/null ;}
+
