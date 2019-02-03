@@ -66,3 +66,5 @@ lowerit () { mv -v "$1" `echo "$1" | tr '[A-Z]' '[a-z]'` ; }
 # sink the stderr etc when evince is opened from terminal
 evince () { `which evince` $1 2>&1 > /dev/null ;}
 
+# gnotime
+alias gnohobby='ssh -X -p 2345 hobbyuser@localhost gnotime'
