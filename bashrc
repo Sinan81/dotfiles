@@ -67,4 +67,13 @@ lowerit () { mv -v "$1" `echo "$1" | tr '[A-Z]' '[a-z]'` ; }
 evince () { `which evince` $1 2>&1 > /dev/null ;}
 
 # gnotime
-alias gnohobby='ssh -X -p 2345 hobbyuser@localhost gnotime'
+gnohobby (){
+  # check if VM is already running or not
+  if [ $( vboxmanage showvminfo "Mint" | grep -c "running (since" ) = "0" ] ; then
+    vboxheadless --startvm Mint 2>&1 > /dev/null &
+    sleep 15
+    ssh -X -p 2345 hobbyuser@localhost gnotime
+  else
+    ssh -X -p 2345 hobbyuser@localhost gnotime
+  fi
+}
