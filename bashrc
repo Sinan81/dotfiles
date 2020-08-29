@@ -64,7 +64,7 @@ unspaceit () { mv -v "$1" `echo $1 | sed 's/ /_/g'`; }
 lowerit () { mv -v "$1" `echo "$1" | tr '[A-Z]' '[a-z]'` ; }
 
 # sink the stderr etc when evince is opened from terminal
-evince () { `which evince` $1 2>&1 > /dev/null ;}
+eevince () { `which xreader` $1 2>&1 > /dev/null ;}
 
 # gnotime
 gnohobby (){
@@ -77,3 +77,5 @@ gnohobby (){
     ssh -X -p 2345 hobbyuser@localhost gnotime
   fi
 }
+
+alias lsb_release='lsb_release --all'
