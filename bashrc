@@ -79,3 +79,4 @@ gnohobby (){
 }
 
 alias lsb_release='lsb_release --all'
+alias xo='xdg-open'
