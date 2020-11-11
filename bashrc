@@ -7,14 +7,17 @@ alias rmv='mv -v -t ~/.local/share/Trash/files/'
 # copy from commandline to desktop clipboard: example: echo  "Hello" | c
 alias c='xsel --clipboard'
 
-alias date_nospace='date | sed "s/ /_/g"'
+alias date_nospace='date | sed "s/ /_/g" | sed "s/:/./g" '
 
 # create 2x2 workspace from command line
 alias 2by2='xprop -root -f _NET_DESKTOP_LAYOUT 32cccc -set _NET_DESKTOP_LAYOUT 0,2,2,0'
 
 export PATH=$PATH:${HOME}/bin
+
 # display paths nicely
 alias paths='echo $PATH | sed -e "s/:/\n/g" '
+alias libs='echo $LD_LIBRARY_PATH | sed -e "s/:/\n/g" '
+
 
 # keyboard costomizations for sony vaio netbook VPC...
 alias switchhome='xmodmap -e "keysym Home = Prior" -e "keysym Prior = Home" -e "keysym End  = Next" -e "keysym Next = End"'
@@ -43,7 +46,7 @@ alias less='less -ir'
 alias bc="bc --mathlib"
 alias grep='grep --color=auto -i'
 # week starts on Monday
-alias cal='cal -M'
+#alias cal='cal -M'
 alias ncal='ncal -bM'
 alias l1="ls -1"
 alias dmesg='dmesg -T'

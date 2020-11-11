@@ -49,4 +49,19 @@ endfunction
 noremap <silent> <c-up> :call <SID>swap_up()<CR>
 noremap <silent> <c-down> :call <SID>swap_down()<CR>
 
-source ~/Documents/online_courses/linuxacademy_python_for_sys_admins/content-python-for-sys-admins/helpers/vimrc
+"source ~/Documents/online_courses/linuxacademy_python_for_sys_admins/content-python-for-sys-admins/helpers/vimrc
+"Set to show invisibles (tabs & trailing spaces) & their highlight color
+set list listchars=tab:»\ ,trail:·
+
+"replace tabs with spaces:
+set tabstop=4 shiftwidth=4 expandtab
+
+"use ruby syntax for puppet *.pp files
+au BufReadPost *.pp set syntax=ruby
+
+"add header location
+set path+=/opt/nec/nosupport/frovedis/x86/include
+
+"make < > shifts keep selection
+vnoremap < <gv
+vnoremap > >gv
